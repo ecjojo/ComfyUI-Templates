@@ -1,5 +1,5 @@
 # ComfyUI Templates
 
 
-1. Image to 5 Facical Expression
-(image2exp.json)
+Image to 5 Facical Expression
+[image2exp.json](https://github.com/heiume/ComfyUI-Templates/blob/main/image2exp.json)
