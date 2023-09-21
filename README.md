@@ -7,6 +7,10 @@ Workflow Download:
 [image2fullbody.json](https://github.com/heiume/ComfyUI-Templates/blob/main/image2fullbody.json) 
 ![Workflow](https://github.com/heiume/ComfyUI-Templates/blob/main/Image/Screenshot02.png)
 
+Lora Used
+https://civitai.com/models/55504/character-a-poses-vtuber-reference-pose-fullbody-halfbody
+
+
 ### Image to 5 Facical Expression
 This workflow let character image to generate multiple facial expressions!
 
@@ -23,3 +27,5 @@ Custom Nodes Used
 https://github.com/cubiq/ComfyUI_IPAdapter_plus
 
 https://github.com/daxthin/facedetailer
+
+
