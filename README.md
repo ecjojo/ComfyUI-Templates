@@ -15,3 +15,11 @@ _input image can’t more than 1 face._
 Workflow Download:
 [image2exp.json](https://github.com/heiume/ComfyUI-Templates/blob/main/image2exp.json) 
 ![Workflow](https://github.com/heiume/ComfyUI-Templates/blob/main/Image/Screenshot01.png)
+
+
+Custom Nodes Used
+
+
+https://github.com/cubiq/ComfyUI_IPAdapter_plus
+
+https://github.com/daxthin/facedetailer
