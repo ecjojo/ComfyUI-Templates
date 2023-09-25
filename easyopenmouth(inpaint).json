@@ -1,0 +1,468 @@
+{
+  "last_node_id": 315,
+  "last_link_id": 560,
+  "nodes": [
+    {
+      "id": 184,
+      "type": "VAEDecode",
+      "pos": [
+        135,
+        6902
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 248
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 249,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            508
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 185,
+      "type": "SaveImage",
+      "pos": [
+        403,
+        6907
+      ],
+      "size": {
+        "0": 368.15966796875,
+        "1": 386.6835632324219
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 508
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "open_mouth"
+      ]
+    },
+    {
+      "id": 301,
+      "type": "VAEEncodeForInpaint",
+      "pos": [
+        -631,
+        7126
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 559,
+          "slot_index": 0
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 547,
+          "slot_index": 1
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 560,
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            540
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncodeForInpaint"
+      },
+      "widgets_values": [
+        6
+      ]
+    },
+    {
+      "id": 181,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -1119,
+        6873
+      ],
+      "size": {
+        "0": 340.6639709472656,
+        "1": 98
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            552
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            527,
+            558
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            249,
+            547
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "meinamix_meinaV10.safetensors"
+      ]
+    },
+    {
+      "id": 176,
+      "type": "KSampler",
+      "pos": [
+        -262,
+        6896
+      ],
+      "size": {
+        "0": 326.9862060546875,
+        "1": 262.3746643066406
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 552
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 557,
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 554
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 540,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            248
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        835069003449917,
+        "randomize",
+        25,
+        7,
+        "dpmpp_2m",
+        "karras",
+        1
+      ]
+    },
+    {
+      "id": 175,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -625,
+        6967
+      ],
+      "size": [
+        304.7007508567865,
+        109.89002869805336
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 527
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            554
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "worst quality,low quality, normal quality, monochrome, grayscale, closed mouth, extended tongue,sad"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 174,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -625,
+        6802
+      ],
+      "size": [
+        299.78692690968603,
+        101.67719846125237
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 558,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            557
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "open mouth,detailed mouth,lips,smile"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 315,
+      "type": "LoadImage",
+      "pos": [
+        -1081,
+        7135
+      ],
+      "size": [
+        315,
+        314.0001449584961
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            559
+          ],
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            560
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "hana01.png",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      248,
+      176,
+      0,
+      184,
+      0,
+      "LATENT"
+    ],
+    [
+      249,
+      181,
+      2,
+      184,
+      1,
+      "VAE"
+    ],
+    [
+      508,
+      184,
+      0,
+      185,
+      0,
+      "IMAGE"
+    ],
+    [
+      527,
+      181,
+      1,
+      175,
+      0,
+      "CLIP"
+    ],
+    [
+      540,
+      301,
+      0,
+      176,
+      3,
+      "LATENT"
+    ],
+    [
+      547,
+      181,
+      2,
+      301,
+      1,
+      "VAE"
+    ],
+    [
+      552,
+      181,
+      0,
+      176,
+      0,
+      "MODEL"
+    ],
+    [
+      554,
+      175,
+      0,
+      176,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      557,
+      174,
+      0,
+      176,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      558,
+      181,
+      1,
+      174,
+      0,
+      "CLIP"
+    ],
+    [
+      559,
+      315,
+      0,
+      301,
+      0,
+      "IMAGE"
+    ],
+    [
+      560,
+      315,
+      1,
+      301,
+      2,
+      "MASK"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
