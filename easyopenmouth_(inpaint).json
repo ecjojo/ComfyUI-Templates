@@ -1,135 +1,13 @@
 {
-  "last_node_id": 315,
-  "last_link_id": 560,
+  "last_node_id": 316,
+  "last_link_id": 561,
   "nodes": [
-    {
-      "id": 184,
-      "type": "VAEDecode",
-      "pos": [
-        135,
-        6902
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 248
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 249,
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            508
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
-    {
-      "id": 185,
-      "type": "SaveImage",
-      "pos": [
-        403,
-        6907
-      ],
-      "size": {
-        "0": 368.15966796875,
-        "1": 386.6835632324219
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 508
-        }
-      ],
-      "properties": {},
-      "widgets_values": [
-        "open_mouth"
-      ]
-    },
-    {
-      "id": 301,
-      "type": "VAEEncodeForInpaint",
-      "pos": [
-        -631,
-        7126
-      ],
-      "size": {
-        "0": 315,
-        "1": 98
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "pixels",
-          "type": "IMAGE",
-          "link": 559,
-          "slot_index": 0
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 547,
-          "slot_index": 1
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": 560,
-          "slot_index": 2
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            540
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEEncodeForInpaint"
-      },
-      "widgets_values": [
-        6
-      ]
-    },
     {
       "id": 181,
       "type": "CheckpointLoaderSimple",
       "pos": [
-        -1119,
-        6873
+        40,
+        200
       ],
       "size": {
         "0": 340.6639709472656,
@@ -180,8 +58,8 @@
       "id": 176,
       "type": "KSampler",
       "pos": [
-        -262,
-        6896
+        900,
+        230
       ],
       "size": {
         "0": 326.9862060546875,
@@ -229,7 +107,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        835069003449917,
+        509878269555324,
         "randomize",
         25,
         7,
@@ -242,13 +120,13 @@
       "id": 175,
       "type": "CLIPTextEncode",
       "pos": [
-        -625,
-        6967
+        540,
+        300
       ],
-      "size": [
-        304.7007508567865,
-        109.89002869805336
-      ],
+      "size": {
+        "0": 304.70074462890625,
+        "1": 109.89002990722656
+      },
       "flags": {},
       "order": 2,
       "mode": 0,
@@ -283,13 +161,13 @@
       "id": 174,
       "type": "CLIPTextEncode",
       "pos": [
-        -625,
-        6802
+        540,
+        130
       ],
-      "size": [
-        299.78692690968603,
-        101.67719846125237
-      ],
+      "size": {
+        "0": 299.78692626953125,
+        "1": 101.67720031738281
+      },
       "flags": {},
       "order": 3,
       "mode": 0,
@@ -322,16 +200,68 @@
       "bgcolor": "#353"
     },
     {
+      "id": 301,
+      "type": "VAEEncodeForInpaint",
+      "pos": [
+        538,
+        470
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 559,
+          "slot_index": 0
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 547,
+          "slot_index": 1
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 560,
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            540
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncodeForInpaint"
+      },
+      "widgets_values": [
+        6
+      ]
+    },
+    {
       "id": 315,
       "type": "LoadImage",
       "pos": [
-        -1081,
-        7135
+        61,
+        455
       ],
-      "size": [
-        315,
-        314.0001449584961
-      ],
+      "size": {
+        "0": 315,
+        "1": 314.0001525878906
+      },
       "flags": {},
       "order": 1,
       "mode": 0,
@@ -358,9 +288,78 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "hana01.png",
+        "clipspace/clipspace-mask-186477.83499991894.png [input]",
         "image"
       ]
+    },
+    {
+      "id": 184,
+      "type": "VAEDecode",
+      "pos": [
+        1300,
+        230
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 248
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 249,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            561
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 316,
+      "type": "PreviewImage",
+      "pos": [
+        1571.9339136962892,
+        243.9844624023438
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 561
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
     }
   ],
   "links": [
@@ -379,14 +378,6 @@
       184,
       1,
       "VAE"
-    ],
-    [
-      508,
-      184,
-      0,
-      185,
-      0,
-      "IMAGE"
     ],
     [
       527,
@@ -459,6 +450,14 @@
       301,
       2,
       "MASK"
+    ],
+    [
+      561,
+      184,
+      0,
+      316,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [],
