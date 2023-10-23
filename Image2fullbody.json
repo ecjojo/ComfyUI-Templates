@@ -1,118 +1,13 @@
 {
-  "last_node_id": 65,
-  "last_link_id": 117,
+  "last_node_id": 70,
+  "last_link_id": 129,
   "nodes": [
-    {
-      "id": 3,
-      "type": "IPAdapterModelLoader",
-      "pos": [
-        -958.1625522912595,
-        -740.4004012064075
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IPADAPTER",
-          "type": "IPADAPTER",
-          "links": [
-            29
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "IPAdapterModelLoader"
-      },
-      "widgets_values": [
-        "ip-adapter-plus_sd15.bin"
-      ]
-    },
-    {
-      "id": 21,
-      "type": "IPAdapterCLIPVisionEncode",
-      "pos": [
-        -957.1625522912595,
-        -612.4004012064075
-      ],
-      "size": {
-        "0": 310.8916320800781,
-        "1": 46
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip_vision",
-          "type": "CLIP_VISION",
-          "link": 28,
-          "slot_index": 0
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 27,
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CLIP_VISION_OUTPUT",
-          "type": "CLIP_VISION_OUTPUT",
-          "links": [
-            26
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "IPAdapterCLIPVisionEncode"
-      }
-    },
-    {
-      "id": 5,
-      "type": "CLIPVisionLoader",
-      "pos": [
-        -961.382469222412,
-        -850.1203680948352
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "CLIP_VISION",
-          "type": "CLIP_VISION",
-          "links": [
-            28
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPVisionLoader"
-      },
-      "widgets_values": [
-        "pytorch_model_P.bin"
-      ]
-    },
     {
       "id": 35,
       "type": "LoraLoader",
       "pos": [
-        -1357.292422362061,
-        -848.0717931399536
+        341.9922443799416,
+        497.2899379588573
       ],
       "size": {
         "0": 315,
@@ -125,7 +20,7 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 47
+          "link": 128
         },
         {
           "name": "clip",
@@ -163,49 +58,11 @@
       ]
     },
     {
-      "id": 49,
-      "type": "MMDetDetectorProvider",
-      "pos": [
-        -147,
-        -850
-      ],
-      "size": {
-        "0": 315,
-        "1": 78
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "BBOX_DETECTOR",
-          "type": "BBOX_DETECTOR",
-          "links": [
-            109
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "SEGM_DETECTOR",
-          "type": "SEGM_DETECTOR",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MMDetDetectorProvider"
-      },
-      "widgets_values": [
-        "bbox/mmdet_anime-face_yolov3.pth"
-      ]
-    },
-    {
       "id": 23,
       "type": "VAEDecode",
       "pos": [
-        -553,
-        -356
+        764.7923376323,
+        988.959999131851
       ],
       "size": {
         "0": 302.1603698730469,
@@ -245,15 +102,15 @@
       "id": 26,
       "type": "EmptyLatentImage",
       "pos": [
-        -562.7400208212277,
-        -849.9795788922123
+        755.0523168110723,
+        494.98042023963865
       ],
       "size": {
         "0": 315,
         "1": 106
       },
       "flags": {},
-      "order": 3,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -275,277 +132,16 @@
       ]
     },
     {
-      "id": 11,
-      "type": "CLIPTextEncode",
-      "pos": [
-        -1345,
-        -1096
-      ],
-      "size": [
-        330.340673828125,
-        114.27411499023447
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 13
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            22,
-            117
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "((background)),ugly,monochrome ,lowres, bad anatomy, bad hands, text,missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, jpeg artifacts,mole"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 10,
-      "type": "CLIPTextEncode",
-      "pos": [
-        -1343,
-        -1297
-      ],
-      "size": [
-        328.34065551757817,
-        156.27407836914062
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 46
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            36,
-            116
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "masterpiece, best quality, Full body, ultra-detailed,((white background)), standing pose, A pose,looking at viewer"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 20,
-      "type": "IPAdapterApply",
-      "pos": [
-        -1334,
-        -1460
-      ],
-      "size": [
-        324.340673828125,
-        118
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 25
-        },
-        {
-          "name": "ipadapter",
-          "type": "IPADAPTER",
-          "link": 29,
-          "slot_index": 1
-        },
-        {
-          "name": "clip_vision_output",
-          "type": "CLIP_VISION_OUTPUT",
-          "link": 26,
-          "slot_index": 2
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": null,
-          "slot_index": 3
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            47,
-            113
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "IPAdapterApply"
-      },
-      "widgets_values": [
-        0.5
-      ]
-    },
-    {
-      "id": 2,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -1333,
-        -1600
-      ],
-      "size": [
-        318.34065551757817,
-        98
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            25
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            13,
-            45,
-            114
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            32,
-            115
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "meinamix_meinaV11.safetensors"
-      ]
-    },
-    {
-      "id": 42,
-      "type": "SaveImage",
-      "pos": [
-        -588,
-        -1611
-      ],
-      "size": [
-        359.34089355468745,
-        641.2738647460938
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 110
-        }
-      ],
-      "properties": {},
-      "widgets_values": [
-        "00_fullbody"
-      ]
-    },
-    {
-      "id": 22,
-      "type": "LoadImage",
-      "pos": [
-        -977,
-        -1603
-      ],
-      "size": [
-        323.34088745117185,
-        615.2741218566892
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            27
-          ],
-          "shape": 3
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "00032-1361801432 (4).png",
-        "image"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 64,
       "type": "FaceDetailer",
       "pos": [
-        -160,
-        -721
+        1171.5977727107488,
+        628.5490259889453
       ],
-      "size": [
-        337.6000061035156,
-        808.0000152587891
-      ],
+      "size": {
+        "0": 337.6000061035156,
+        "1": 808
+      },
       "flags": {},
       "order": 13,
       "mode": 0,
@@ -558,7 +154,7 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 113
+          "link": 129
         },
         {
           "name": "clip",
@@ -651,7 +247,7 @@
         256,
         true,
         768,
-        753770736855720,
+        811582548706171,
         "randomize",
         25,
         7,
@@ -678,8 +274,8 @@
       "id": 18,
       "type": "KSampler",
       "pos": [
-        -553,
-        -679
+        764.7923376323,
+        665.9599991318509
       ],
       "size": {
         "0": 315,
@@ -726,13 +322,399 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        529384488681945,
+        704856380713789,
         "randomize",
         25,
         7,
         "dpmpp_2m_sde",
         "karras",
         1
+      ]
+    },
+    {
+      "id": 5,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        358.97448545855303,
+        765.9372921620158
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            124
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionLoader"
+      },
+      "widgets_values": [
+        "model.safetensors"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "IPAdapterModelLoader",
+      "pos": [
+        362.19440238970554,
+        875.657259050443
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IPADAPTER",
+          "type": "IPADAPTER",
+          "links": [
+            126
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterModelLoader"
+      },
+      "widgets_values": [
+        "ip-adapter-plus_sd15.bin"
+      ]
+    },
+    {
+      "id": 69,
+      "type": "IPAdapterApply",
+      "pos": [
+        370.3569546809651,
+        995.0576602568506
+      ],
+      "size": {
+        "0": 315,
+        "1": 142
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": 126
+        },
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 124
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 127
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 125,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            128
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterApply"
+      },
+      "widgets_values": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        348.4093948697726,
+        -138.06833325633175
+      ],
+      "size": {
+        "0": 318.3406677246094,
+        "1": 98
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            125,
+            129
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            13,
+            45,
+            114
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            32,
+            115
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "meinamix_meinaV11.safetensors"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "CLIPTextEncode",
+      "pos": [
+        344.4093948697726,
+        17.931666743668266
+      ],
+      "size": {
+        "0": 328.3406677246094,
+        "1": 156.27407836914062
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 46
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            36,
+            116
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "masterpiece, best quality, Full body, ultra-detailed,((white background)), standing pose, A pose,looking at viewer"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 11,
+      "type": "CLIPTextEncode",
+      "pos": [
+        349.4093948697726,
+        228.93166674366853
+      ],
+      "size": {
+        "0": 330.3406677246094,
+        "1": 114.27411651611328
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            22,
+            117
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "((background)),ugly,monochrome ,lowres, bad anatomy, bad hands, text,missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, jpeg artifacts,mole"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 49,
+      "type": "MMDetDetectorProvider",
+      "pos": [
+        1184.5977727107488,
+        499.54902598894535
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "BBOX_DETECTOR",
+          "type": "BBOX_DETECTOR",
+          "links": [
+            109
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "SEGM_DETECTOR",
+          "type": "SEGM_DETECTOR",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MMDetDetectorProvider"
+      },
+      "widgets_values": [
+        "bbox/mmdet_anime-face_yolov3.pth"
+      ]
+    },
+    {
+      "id": 70,
+      "type": "Note",
+      "pos": [
+        65,
+        493
+      ],
+      "size": [
+        235.62548828125,
+        128.09716796875
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Please download this Lora\n\nhttps://civitai.com/models/55504/character-a-poses-vtuber-reference-pose-fullbody-halfbody"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 22,
+      "type": "LoadImage",
+      "pos": [
+        743,
+        -146
+      ],
+      "size": [
+        314.509322265625,
+        499.53214062500115
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            127
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "00026 (2).jpeg",
+        "image"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 42,
+      "type": "SaveImage",
+      "pos": [
+        1155,
+        -202
+      ],
+      "size": [
+        346.15600410937486,
+        573.1264446171875
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 110
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "00_fullbody"
       ]
     }
   ],
@@ -752,46 +734,6 @@
       18,
       2,
       "CONDITIONING"
-    ],
-    [
-      25,
-      2,
-      0,
-      20,
-      0,
-      "MODEL"
-    ],
-    [
-      26,
-      21,
-      0,
-      20,
-      2,
-      "CLIP_VISION_OUTPUT"
-    ],
-    [
-      27,
-      22,
-      0,
-      21,
-      1,
-      "IMAGE"
-    ],
-    [
-      28,
-      5,
-      0,
-      21,
-      0,
-      "CLIP_VISION"
-    ],
-    [
-      29,
-      3,
-      0,
-      20,
-      1,
-      "IPADAPTER"
     ],
     [
       30,
@@ -842,14 +784,6 @@
       "CLIP"
     ],
     [
-      47,
-      20,
-      0,
-      35,
-      0,
-      "MODEL"
-    ],
-    [
       48,
       35,
       0,
@@ -882,14 +816,6 @@
       "IMAGE"
     ],
     [
-      113,
-      20,
-      0,
-      64,
-      1,
-      "MODEL"
-    ],
-    [
       114,
       2,
       1,
@@ -920,62 +846,116 @@
       64,
       5,
       "CONDITIONING"
+    ],
+    [
+      124,
+      5,
+      0,
+      69,
+      1,
+      "CLIP_VISION"
+    ],
+    [
+      125,
+      2,
+      0,
+      69,
+      3,
+      "MODEL"
+    ],
+    [
+      126,
+      3,
+      0,
+      69,
+      0,
+      "IPADAPTER"
+    ],
+    [
+      127,
+      22,
+      0,
+      69,
+      2,
+      "IMAGE"
+    ],
+    [
+      128,
+      69,
+      0,
+      35,
+      0,
+      "MODEL"
+    ],
+    [
+      129,
+      2,
+      0,
+      64,
+      1,
+      "MODEL"
     ]
   ],
   "groups": [
     {
       "title": "IPA",
       "bounding": [
-        -982,
-        -937,
-        363,
-        580
+        338,
+        679,
+        362,
+        480
       ],
-      "color": "#3f789e"
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
     },
     {
       "title": "FaceDetailer",
       "bounding": [
-        -191,
-        -937,
+        1140,
+        413,
         407,
         1052
       ],
-      "color": "#3f789e"
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
     },
     {
       "title": "Image Setting",
       "bounding": [
-        -589,
-        -938,
+        729,
+        407,
         373,
         675
       ],
-      "color": "#3f789e"
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
     },
     {
       "title": "FullbodyLora",
       "bounding": [
-        -1369,
-        -939,
+        330,
+        406,
         359,
         248
       ],
       "color": "#3f789e",
-      "id": "d9b25742-919a-49e2-921b-a39977d6d62a",
-      "isStack": false
+      "font_size": 24,
+      "locked": false
     },
     {
       "title": "Prompt & Input Image",
       "bounding": [
-        -1368,
-        -1698,
-        748,
-        737
+        324,
+        -243,
+        779,
+        618
       ],
       "color": "#3f789e",
-      "id": "8580bcd3-da0b-4df7-8785-ff05ee7e33dd",
-      "isStack": false
+      "font_size": 24,
+      "locked": false
     }
   ],
   "config": {},
