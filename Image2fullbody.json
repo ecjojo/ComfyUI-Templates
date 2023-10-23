@@ -1,6 +1,6 @@
 {
-  "last_node_id": 70,
-  "last_link_id": 129,
+  "last_node_id": 72,
+  "last_link_id": 130,
   "nodes": [
     {
       "id": 23,
@@ -42,145 +42,6 @@
       "properties": {
         "Node name for S&R": "VAEDecode"
       }
-    },
-    {
-      "id": 64,
-      "type": "FaceDetailer",
-      "pos": [
-        1171.5977727107488,
-        628.5490259889453
-      ],
-      "size": {
-        "0": 337.6000061035156,
-        "1": 808
-      },
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 111
-        },
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 129
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 114
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 115
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 116,
-          "slot_index": 4
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 117,
-          "slot_index": 5
-        },
-        {
-          "name": "bbox_detector",
-          "type": "BBOX_DETECTOR",
-          "link": 109
-        },
-        {
-          "name": "sam_model_opt",
-          "type": "SAM_MODEL",
-          "link": null
-        },
-        {
-          "name": "segm_detector_opt",
-          "type": "SEGM_DETECTOR",
-          "link": null
-        },
-        {
-          "name": "detailer_hook",
-          "type": "DETAILER_HOOK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            110
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "cropped_refined",
-          "type": "IMAGE",
-          "links": null,
-          "shape": 6
-        },
-        {
-          "name": "cropped_enhanced_alpha",
-          "type": "IMAGE",
-          "links": null,
-          "shape": 6
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "detailer_pipe",
-          "type": "DETAILER_PIPE",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "cnet_images",
-          "type": "IMAGE",
-          "links": null,
-          "shape": 6
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FaceDetailer"
-      },
-      "widgets_values": [
-        256,
-        true,
-        768,
-        641592302413163,
-        "randomize",
-        25,
-        7,
-        "dpmpp_2m_sde",
-        "karras",
-        0.5,
-        5,
-        true,
-        true,
-        0.5,
-        10,
-        3,
-        "center-1",
-        0,
-        0.93,
-        0,
-        0.7,
-        "False",
-        10,
-        ""
-      ]
     },
     {
       "id": 18,
@@ -234,7 +95,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        674473559651468,
+        336000522795204,
         "randomize",
         25,
         7,
@@ -446,56 +307,18 @@
       "bgcolor": "#533"
     },
     {
-      "id": 49,
-      "type": "MMDetDetectorProvider",
-      "pos": [
-        1184.5977727107488,
-        499.54902598894535
-      ],
-      "size": {
-        "0": 315,
-        "1": 78
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "BBOX_DETECTOR",
-          "type": "BBOX_DETECTOR",
-          "links": [
-            109
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "SEGM_DETECTOR",
-          "type": "SEGM_DETECTOR",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MMDetDetectorProvider"
-      },
-      "widgets_values": [
-        "bbox/mmdet_anime-face_yolov3.pth"
-      ]
-    },
-    {
       "id": 70,
       "type": "Note",
       "pos": [
         65,
         493
       ],
-      "size": [
-        235.62548828125,
-        128.09716796875
-      ],
+      "size": {
+        "0": 235.62548828125,
+        "1": 128.09716796875
+      },
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "properties": {
         "text": ""
@@ -505,73 +328,6 @@
       ],
       "color": "#2a363b",
       "bgcolor": "#3f5159"
-    },
-    {
-      "id": 42,
-      "type": "SaveImage",
-      "pos": [
-        1155,
-        -202
-      ],
-      "size": [
-        346.15600410937486,
-        573.1264446171875
-      ],
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 110
-        }
-      ],
-      "properties": {},
-      "widgets_values": [
-        "00_fullbody"
-      ]
-    },
-    {
-      "id": 22,
-      "type": "LoadImage",
-      "pos": [
-        743,
-        -146
-      ],
-      "size": [
-        314.509322265625,
-        499.53214062500115
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            127
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_temp_ondfy_00021_.png",
-        "image"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
     },
     {
       "id": 35,
@@ -640,7 +396,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -716,6 +472,250 @@
         0.7000000000000001,
         0.1
       ]
+    },
+    {
+      "id": 42,
+      "type": "SaveImage",
+      "pos": [
+        1159,
+        -197
+      ],
+      "size": {
+        "0": 346.156005859375,
+        "1": 573.12646484375
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 110
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "00_fullbody"
+      ]
+    },
+    {
+      "id": 64,
+      "type": "FaceDetailer",
+      "pos": [
+        1153.9558309922074,
+        646.3278553119704
+      ],
+      "size": {
+        "0": 337.6000061035156,
+        "1": 808
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 111
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 129
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 114
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 115
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 116,
+          "slot_index": 4
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 117,
+          "slot_index": 5
+        },
+        {
+          "name": "bbox_detector",
+          "type": "BBOX_DETECTOR",
+          "link": 130
+        },
+        {
+          "name": "sam_model_opt",
+          "type": "SAM_MODEL",
+          "link": null
+        },
+        {
+          "name": "segm_detector_opt",
+          "type": "SEGM_DETECTOR",
+          "link": null
+        },
+        {
+          "name": "detailer_hook",
+          "type": "DETAILER_HOOK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            110
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "cropped_refined",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 6
+        },
+        {
+          "name": "cropped_enhanced_alpha",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 6
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "detailer_pipe",
+          "type": "DETAILER_PIPE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "cnet_images",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceDetailer"
+      },
+      "widgets_values": [
+        256,
+        true,
+        768,
+        918539598387535,
+        "randomize",
+        25,
+        7,
+        "dpmpp_2m_sde",
+        "karras",
+        0.5,
+        5,
+        true,
+        true,
+        0.5,
+        10,
+        3,
+        "center-1",
+        0,
+        0.93,
+        0,
+        0.7,
+        "False",
+        10,
+        ""
+      ]
+    },
+    {
+      "id": 22,
+      "type": "LoadImage",
+      "pos": [
+        743,
+        -146
+      ],
+      "size": {
+        "0": 314.5093078613281,
+        "1": 499.5321350097656
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            127
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Imagesimage_00130_.png",
+        "image"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 72,
+      "type": "UltralyticsDetectorProvider",
+      "pos": [
+        1168,
+        519
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "BBOX_DETECTOR",
+          "type": "BBOX_DETECTOR",
+          "links": [
+            130
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "SEGM_DETECTOR",
+          "type": "SEGM_DETECTOR",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsDetectorProvider"
+      },
+      "widgets_values": [
+        "bbox/face_yolov8m.pt"
+      ]
     }
   ],
   "links": [
@@ -790,14 +790,6 @@
       18,
       0,
       "MODEL"
-    ],
-    [
-      109,
-      49,
-      0,
-      64,
-      6,
-      "BBOX_DETECTOR"
     ],
     [
       110,
@@ -894,6 +886,14 @@
       64,
       1,
       "MODEL"
+    ],
+    [
+      130,
+      72,
+      0,
+      64,
+      6,
+      "BBOX_DETECTOR"
     ]
   ],
   "groups": [
@@ -912,8 +912,8 @@
     {
       "title": "FaceDetailer",
       "bounding": [
-        1140,
-        413,
+        1123,
+        430,
         407,
         1052
       ],
