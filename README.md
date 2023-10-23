@@ -1,5 +1,7 @@
 # ComfyUI Templates
 
+"⭐Give me a star if u like this!⭐"
+
 ### Image to Fullbody Character
 This workflow can let your character into fullbody image!
 
