@@ -30,4 +30,8 @@ https://github.com/cubiq/ComfyUI_IPAdapter_plus
 
 https://github.com/daxthin/facedetailer
 
-
+### Inpaint Image to open mouth
+|For avatar-graph-comfyui preprocess!
+Workflow Download:
+[easyopenmouth.json](https://github.com/heiume/ComfyUI-Templates/blob/main/easyopenmouth_(inpaint).json)
+![Workflow](https://github.com/heiume/ComfyUI-Templates/blob/main/Image/Screenshot03.png)
