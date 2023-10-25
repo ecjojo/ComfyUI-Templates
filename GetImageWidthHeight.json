@@ -1,0 +1,478 @@
+{
+  "last_node_id": 40,
+  "last_link_id": 21,
+  "nodes": [
+    {
+      "id": 36,
+      "type": "Constant Number",
+      "pos": [
+        710,
+        340
+      ],
+      "size": [
+        315,
+        146
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "number",
+          "type": "FLOAT",
+          "link": 17,
+          "widget": {
+            "name": "number",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": [
+            16
+          ],
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Constant Number"
+      },
+      "widgets_values": [
+        "integer",
+        0,
+        ""
+      ]
+    },
+    {
+      "id": 31,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1041,
+        424
+      ],
+      "size": [
+        315,
+        76
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 14,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "1024"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "Number to Text",
+      "pos": [
+        1042,
+        554
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number",
+          "type": "NUMBER",
+          "link": 20,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Number to Text"
+      }
+    },
+    {
+      "id": 37,
+      "type": "GetImageWidthHeight",
+      "pos": [
+        366,
+        349
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 18,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "FLOAT",
+          "links": [
+            17
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "height",
+          "type": "FLOAT",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetImageWidthHeight"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 40,
+      "type": "Constant Number",
+      "pos": [
+        710,
+        558
+      ],
+      "size": [
+        315,
+        146
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "number",
+          "type": "FLOAT",
+          "link": 21,
+          "widget": {
+            "name": "number",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -18446744073709552000,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": [
+            20
+          ],
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Constant Number"
+      },
+      "widgets_values": [
+        "integer",
+        0,
+        ""
+      ]
+    },
+    {
+      "id": 38,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1032,
+        629
+      ],
+      "size": [
+        315,
+        76
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 19,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "1024"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "Number to Text",
+      "pos": [
+        1042,
+        345
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number",
+          "type": "NUMBER",
+          "link": 16,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Number to Text"
+      }
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        25,
+        349
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "00000-2858642830_data_removed.jpeg",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      14,
+      32,
+      0,
+      31,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      36,
+      0,
+      32,
+      0,
+      "NUMBER"
+    ],
+    [
+      17,
+      37,
+      0,
+      36,
+      1,
+      "FLOAT"
+    ],
+    [
+      18,
+      1,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      39,
+      0,
+      38,
+      0,
+      "STRING"
+    ],
+    [
+      20,
+      40,
+      0,
+      39,
+      0,
+      "NUMBER"
+    ],
+    [
+      21,
+      37,
+      1,
+      40,
+      1,
+      "FLOAT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
