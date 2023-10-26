@@ -52,7 +52,7 @@
         1.2000000000000002,
         1.2000000000000002,
         1.2000000000000002,
-        150535352107533,
+        128253748247641,
         "randomize"
       ],
       "color": "#323",
@@ -161,6 +161,59 @@
       ]
     },
     {
+      "id": 338,
+      "type": "Mesh_ModifyShapeKey",
+      "pos": [
+        1220,
+        680
+      ],
+      "size": {
+        "0": 315,
+        "1": 298
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "BPY_OBJ",
+          "type": "BPY_OBJ",
+          "link": 589
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BPY_OBJ",
+          "type": "BPY_OBJ",
+          "links": [
+            590
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Mesh_ModifyShapeKey"
+      },
+      "widgets_values": [
+        "MouthClose",
+        "Mouth",
+        1,
+        0.1,
+        0,
+        0,
+        0.35000000000000003,
+        0,
+        0,
+        1,
+        0
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
       "id": 337,
       "type": "Object_CreateMeshLayer",
       "pos": [
@@ -210,7 +263,7 @@
         1.4000000000000001,
         1.4000000000000001,
         1.4000000000000001,
-        460476805232150,
+        962533892914535,
         "randomize"
       ],
       "color": "#323",
@@ -310,7 +363,7 @@
         1.2000000000000002,
         1.2000000000000002,
         1.2000000000000002,
-        67352908450506,
+        1023150355285655,
         "randomize"
       ],
       "color": "#323",
@@ -462,6 +515,72 @@
       "bgcolor": "#355"
     },
     {
+      "id": 319,
+      "type": "SAM MultiLayer",
+      "pos": [
+        152,
+        569
+      ],
+      "size": {
+        "0": 210,
+        "1": 190
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 565
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SAM_PROMPT",
+          "type": "SAM_PROMPT",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "left_eye",
+          "type": "IMAGE",
+          "links": [
+            594
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "right_eye",
+          "type": "IMAGE",
+          "links": [
+            595
+          ],
+          "slot_index": 2
+        },
+        {
+          "name": "mouth",
+          "type": "IMAGE",
+          "links": [
+            596
+          ],
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM"
+      },
+      "widgets_values": [
+        "sam_vit_h_4b8939.pth",
+        "character.png",
+        "{\"left_eye\":[{\"x\":185,\"y\":256,\"label\":1},{\"x\":196,\"y\":251,\"label\":1}],\"right_eye\":[{\"x\":312,\"y\":252,\"label\":1},{\"x\":327,\"y\":250,\"label\":1}],\"mouth\":[{\"x\":262,\"y\":316,\"label\":1}]}",
+        "{\"Left_Eye\":[{\"x\":279,\"y\":255,\"label\":1},{\"x\":196,\"y\":291,\"label\":0},{\"x\":258,\"y\":338,\"label\":0}],\"Right_Eye\":[{\"x\":157,\"y\":266,\"label\":1},{\"x\":295,\"y\":262,\"label\":0}],\"Mouth\":[{\"x\":244,\"y\":364,\"label\":1},{\"x\":247,\"y\":281,\"label\":0}]}"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
       "id": 328,
       "type": "Mesh_PrimitivePlaneAdd",
       "pos": [
@@ -509,7 +628,7 @@
         "Node name for S&R": "Mesh_PrimitivePlaneAdd"
       },
       "widgets_values": [
-        921516199060072,
+        190916287181704,
         "randomize",
         2,
         true,
@@ -630,128 +749,9 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "Demo_00214_.png",
+        "CleanShot 2023-10-05 at 13.44.13.png",
         "image"
       ]
-    },
-    {
-      "id": 319,
-      "type": "SAM MultiLayer",
-      "pos": [
-        152,
-        569
-      ],
-      "size": {
-        "0": 210,
-        "1": 190
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 565
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SAM_PROMPT",
-          "type": "SAM_PROMPT",
-          "links": null,
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "left_eye",
-          "type": "IMAGE",
-          "links": [
-            594
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "right_eye",
-          "type": "IMAGE",
-          "links": [
-            595
-          ],
-          "slot_index": 2
-        },
-        {
-          "name": "mouth",
-          "type": "IMAGE",
-          "links": [
-            596
-          ],
-          "slot_index": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SAM"
-      },
-      "widgets_values": [
-        "sam_vit_h_4b8939.pth",
-        "Demo_00214_.png",
-        "{\"left_eye\":[{\"x\":335,\"y\":182,\"label\":1},{\"x\":356,\"y\":179,\"label\":1},{\"x\":334,\"y\":206,\"label\":0},{\"x\":370,\"y\":202,\"label\":0},{\"x\":337,\"y\":132,\"label\":0},{\"x\":392,\"y\":159,\"label\":0},{\"x\":289,\"y\":179,\"label\":0}],\"right_eye\":[{\"x\":440,\"y\":177,\"label\":1},{\"x\":465,\"y\":175,\"label\":1},{\"x\":426,\"y\":204,\"label\":0},{\"x\":465,\"y\":201,\"label\":0},{\"x\":417,\"y\":162,\"label\":0},{\"x\":457,\"y\":135,\"label\":0},{\"x\":492,\"y\":173,\"label\":0}],\"mouth\":[{\"x\":389,\"y\":269,\"label\":1},{\"x\":419,\"y\":269,\"label\":1},{\"x\":352,\"y\":259,\"label\":0},{\"x\":403,\"y\":248,\"label\":0},{\"x\":452,\"y\":266,\"label\":0},{\"x\":431,\"y\":292,\"label\":0},{\"x\":377,\"y\":289,\"label\":0}]}",
-        "{\"Left_Eye\":[{\"x\":279,\"y\":255,\"label\":1},{\"x\":196,\"y\":291,\"label\":0},{\"x\":258,\"y\":338,\"label\":0}],\"Right_Eye\":[{\"x\":157,\"y\":266,\"label\":1},{\"x\":295,\"y\":262,\"label\":0}],\"Mouth\":[{\"x\":244,\"y\":364,\"label\":1},{\"x\":247,\"y\":281,\"label\":0}]}"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 338,
-      "type": "Mesh_ModifyShapeKey",
-      "pos": [
-        1220,
-        680
-      ],
-      "size": {
-        "0": 315,
-        "1": 298
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "BPY_OBJ",
-          "type": "BPY_OBJ",
-          "link": 589
-        }
-      ],
-      "outputs": [
-        {
-          "name": "BPY_OBJ",
-          "type": "BPY_OBJ",
-          "links": [
-            590
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Mesh_ModifyShapeKey"
-      },
-      "widgets_values": [
-        "MouthClose",
-        "Mouth",
-        1,
-        0.1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0
-      ],
-      "color": "#233",
-      "bgcolor": "#355"
     }
   ],
   "links": [
