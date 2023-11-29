@@ -6,8 +6,8 @@
       "id": 56,
       "type": "StringFunction|pysssss",
       "pos": [
-        -80,
-        -490
+        2100,
+        1610
       ],
       "size": {
         "0": 400,
@@ -59,15 +59,15 @@
       "id": 7,
       "type": "IPAdapterModelLoader",
       "pos": [
-        -890,
-        -900
+        1290,
+        1200
       ],
       "size": {
         "0": 315,
         "1": 58
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -90,8 +90,8 @@
       "id": 8,
       "type": "KSampler",
       "pos": [
-        -1342,
-        -1628
+        830,
+        470
       ],
       "size": {
         "0": 328.9459228515625,
@@ -140,7 +140,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        960531495680770,
+        280395053432011,
         "randomize",
         10,
         2,
@@ -153,8 +153,8 @@
       "id": 12,
       "type": "VAEDecode",
       "pos": [
-        -1328,
-        -1720
+        850,
+        380
       ],
       "size": {
         "0": 210,
@@ -195,8 +195,8 @@
       "id": 20,
       "type": "PreviewImage",
       "pos": [
-        -495,
-        -1253
+        1680,
+        850
       ],
       "size": {
         "0": 210,
@@ -220,8 +220,8 @@
       "id": 41,
       "type": "StringFunction|pysssss",
       "pos": [
-        -60,
-        -900
+        2120,
+        1200
       ],
       "size": {
         "0": 329.4609069824219,
@@ -273,8 +273,8 @@
       "id": 2,
       "type": "IPAdapterApply",
       "pos": [
-        8,
-        -1257
+        2180,
+        840
       ],
       "size": {
         "0": 325.3442077636719,
@@ -331,15 +331,15 @@
       "id": 6,
       "type": "CLIPVisionLoader",
       "pos": [
-        -890,
-        -1010
+        1290,
+        1090
       ],
       "size": {
         "0": 315,
         "1": 58
       },
       "flags": {},
-      "order": 4,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -362,8 +362,8 @@
       "id": 42,
       "type": "StringFunction|pysssss",
       "pos": [
-        -1792,
-        -1247
+        380,
+        850
       ],
       "size": {
         "0": 325.66650390625,
@@ -430,8 +430,8 @@
       "id": 9,
       "type": "CLIPTextEncode",
       "pos": [
-        -1797,
-        -934
+        380,
+        1170
       ],
       "size": {
         "0": 331.64324951171875,
@@ -488,8 +488,8 @@
       "id": 10,
       "type": "CLIPTextEncode",
       "pos": [
-        -1807,
-        -834
+        370,
+        1270
       ],
       "size": {
         "0": 345.23419189453125,
@@ -530,15 +530,15 @@
       "id": 47,
       "type": "ControlNetLoader",
       "pos": [
-        -1376,
-        -1247
+        800,
+        850
       ],
       "size": {
         "0": 315,
         "1": 58
       },
       "flags": {},
-      "order": 5,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -561,8 +561,8 @@
       "id": 53,
       "type": "VAEDecode",
       "pos": [
-        -1795,
-        -585
+        380,
+        1520
       ],
       "size": {
         "0": 210,
@@ -603,8 +603,8 @@
       "id": 57,
       "type": "SaveImage",
       "pos": [
-        -1321,
-        -2047
+        850,
+        50
       ],
       "size": [
         315,
@@ -629,15 +629,15 @@
       "id": 1,
       "type": "LoadImage",
       "pos": [
-        -935,
-        -1685
+        1240,
+        420
       ],
       "size": [
         351.2231750488281,
         314
       ],
       "flags": {},
-      "order": 6,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -672,8 +672,8 @@
       "id": 55,
       "type": "SaveImage",
       "pos": [
-        -944,
-        -2049
+        1230,
+        50
       ],
       "size": {
         "0": 356.0992126464844,
@@ -695,58 +695,11 @@
       ]
     },
     {
-      "id": 43,
-      "type": "BLIP Analyze Image",
-      "pos": [
-        -512,
-        -487
-      ],
-      "size": {
-        "0": 400,
-        "1": 200
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 65
-        },
-        {
-          "name": "blip_model",
-          "type": "BLIP_MODEL",
-          "link": 66,
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            67,
-            92
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "BLIP Analyze Image"
-      },
-      "widgets_values": [
-        "interrogate",
-        "what is this image atmosphere and tone?"
-      ]
-    },
-    {
       "id": 22,
       "type": "BLIP Analyze Image",
       "pos": [
-        -521,
-        -895
+        1650,
+        1210
       ],
       "size": {
         "0": 400,
@@ -792,8 +745,8 @@
       "id": 24,
       "type": "ShowText|pysssss",
       "pos": [
-        -503,
-        -641
+        1670,
+        1460
       ],
       "size": {
         "0": 315,
@@ -838,8 +791,8 @@
       "id": 44,
       "type": "ShowText|pysssss",
       "pos": [
-        -505,
-        -239
+        1670,
+        1860
       ],
       "size": {
         "0": 315,
@@ -883,8 +836,8 @@
       "id": 46,
       "type": "ControlNetApply",
       "pos": [
-        -1367.0590021562493,
-        -647.1726697812501
+        810,
+        1450
       ],
       "size": {
         "0": 317.4000244140625,
@@ -934,8 +887,8 @@
       "id": 19,
       "type": "ColorPreprocessor",
       "pos": [
-        -883,
-        -1232
+        1290,
+        870
       ],
       "size": {
         "0": 315,
@@ -975,8 +928,8 @@
       "id": 18,
       "type": "PreviewImage",
       "pos": [
-        -248,
-        -1257
+        1930,
+        840
       ],
       "size": {
         "0": 210,
@@ -997,58 +950,11 @@
       }
     },
     {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -1756,
-        -1669
-      ],
-      "size": {
-        "0": 315,
-        "1": 98
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            30
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            31
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "Anime/landscapeAnimePro_v20Inspiration.safetensors"
-      ]
-    },
-    {
       "id": 5,
       "type": "LoraLoader",
       "pos": [
-        -1766,
-        -1496
+        410,
+        610
       ],
       "size": {
         "0": 315,
@@ -1104,15 +1010,15 @@
       "id": 11,
       "type": "EmptyLatentImage",
       "pos": [
-        -1759,
-        -1831
+        420,
+        270
       ],
       "size": {
         "0": 315,
         "1": 106
       },
       "flags": {},
-      "order": 2,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -1139,8 +1045,8 @@
       "id": 3,
       "type": "LoraLoader",
       "pos": [
-        -2166,
-        -1228
+        10,
+        870
       ],
       "size": {
         "0": 315,
@@ -1195,8 +1101,8 @@
       "id": 50,
       "type": "KSampler",
       "pos": [
-        -2174,
-        -1058
+        0,
+        1040
       ],
       "size": {
         "0": 315,
@@ -1243,7 +1149,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        89757781825103,
+        403337216321423,
         "randomize",
         10,
         2,
@@ -1256,15 +1162,15 @@
       "id": 13,
       "type": "VAELoader",
       "pos": [
-        -2181,
-        -739
+        -10,
+        1360
       ],
       "size": {
         "0": 315,
         "1": 58
       },
       "flags": {},
-      "order": 3,
+      "order": 5,
       "mode": 0,
       "outputs": [
         {
@@ -1289,8 +1195,8 @@
       "id": 48,
       "type": "LeReS-DepthMapPreprocessor",
       "pos": [
-        -1390,
-        -1120
+        790,
+        980
       ],
       "size": [
         369.6000061035156,
@@ -1332,8 +1238,8 @@
       "id": 49,
       "type": "PreviewImage",
       "pos": [
-        -1372,
-        -957
+        800,
+        1140
       ],
       "size": {
         "0": 267.6402282714844,
@@ -1357,8 +1263,8 @@
       "id": 17,
       "type": "ShufflePreprocessor",
       "pos": [
-        -874,
-        -1104
+        1300,
+        1000
       ],
       "size": {
         "0": 210,
@@ -1395,15 +1301,15 @@
       "id": 23,
       "type": "BLIP Model Loader",
       "pos": [
-        -896,
-        -727
+        1280,
+        1370
       ],
       "size": {
         "0": 315,
         "1": 58
       },
       "flags": {},
-      "order": 0,
+      "order": 6,
       "mode": 0,
       "outputs": [
         {
@@ -1421,6 +1327,100 @@
       },
       "widgets_values": [
         "interrogate"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        420,
+        450
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            30
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            31
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "Anime/landscapeAnimePro_v20Inspiration.safetensors"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "BLIP Analyze Image",
+      "pos": [
+        1660,
+        1620
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 65
+        },
+        {
+          "name": "blip_model",
+          "type": "BLIP_MODEL",
+          "link": 66,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            67,
+            92
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BLIP Analyze Image"
+      },
+      "widgets_values": [
+        "interrogate",
+        "what is this image atmosphere and tone?"
       ]
     }
   ],
@@ -1782,8 +1782,8 @@
     {
       "title": "Room Gen",
       "bounding": [
-        -2199,
-        -1346,
+        -35,
+        773,
         1199,
         902
       ],
@@ -1794,8 +1794,8 @@
     {
       "title": "Style",
       "bounding": [
-        -936,
-        -1345,
+        1252,
+        786,
         1339,
         1209
       ],
