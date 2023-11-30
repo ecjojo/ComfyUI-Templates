@@ -6,8 +6,8 @@
       "id": 45,
       "type": "CheckpointLoaderSimple",
       "pos": [
-        -320,
-        -683
+        -80,
+        -50
       ],
       "size": {
         "0": 374.7369689941406,
@@ -52,8 +52,8 @@
       "id": 46,
       "type": "CLIPSetLastLayer",
       "pos": [
-        85,
-        -668
+        330,
+        -40
       ],
       "size": {
         "0": 210,
@@ -91,8 +91,8 @@
       "id": 44,
       "type": "LoraLoader",
       "pos": [
-        -319,
-        -525
+        -70,
+        110
       ],
       "size": [
         376.35498046875,
@@ -145,8 +145,8 @@
       "id": 14,
       "type": "VideoLinearCFGGuidance",
       "pos": [
-        101,
-        -526
+        350,
+        110
       ],
       "size": {
         "0": 315,
@@ -184,8 +184,8 @@
       "id": 15,
       "type": "ImageOnlyCheckpointLoader",
       "pos": [
-        -326,
-        -334
+        -80,
+        300
       ],
       "size": {
         "0": 410,
@@ -235,8 +235,8 @@
       "id": 43,
       "type": "SDXLResolutionPresets",
       "pos": [
-        112,
-        -161
+        360,
+        470
       ],
       "size": {
         "0": 315,
@@ -277,8 +277,8 @@
       "id": 12,
       "type": "SVD_img2vid_Conditioning",
       "pos": [
-        463,
-        -215
+        710,
+        420
       ],
       "size": {
         "0": 315,
@@ -366,8 +366,8 @@
       "id": 40,
       "type": "Seed (rgthree)",
       "pos": [
-        569,
-        67
+        810,
+        700
       ],
       "size": {
         "0": 210,
@@ -401,8 +401,8 @@
       "id": 30,
       "type": "RIFE VFI",
       "pos": [
-        1214,
-        -368
+        1460,
+        260
       ],
       "size": {
         "0": 426.4991760253906,
@@ -452,8 +452,8 @@
       "id": 23,
       "type": "LoadImage",
       "pos": [
-        -321,
-        -156
+        -80,
+        480
       ],
       "size": {
         "0": 410,
@@ -490,60 +490,11 @@
       "bgcolor": "#653"
     },
     {
-      "id": 26,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        1215,
-        -115
-      ],
-      "size": [
-        541.4005978484379,
-        765.4005978484379
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 82
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "VHS_VideoCombine"
-      },
-      "widgets_values": {
-        "frame_rate": 20,
-        "loop_count": 0,
-        "filename_prefix": "AnimateDiff",
-        "format": "video/h264-mp4",
-        "pingpong": false,
-        "save_image": true,
-        "crf": 20,
-        "save_metadata": false,
-        "audio_file": "",
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "AnimateDiff_00009.mp4",
-            "subfolder": "",
-            "type": "output",
-            "format": "video/h264-mp4"
-          }
-        }
-      },
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 8,
       "type": "VAEDecode",
       "pos": [
-        943,
-        -363
+        1190,
+        270
       ],
       "size": {
         "0": 210,
@@ -582,8 +533,8 @@
       "id": 36,
       "type": "FreeU_V2",
       "pos": [
-        465,
-        -523
+        710,
+        110
       ],
       "size": {
         "0": 315,
@@ -624,8 +575,8 @@
       "id": 38,
       "type": "KSampler",
       "pos": [
-        842,
-        -229
+        1090,
+        400
       ],
       "size": {
         "0": 315,
@@ -691,6 +642,55 @@
         "sgm_uniform",
         1
       ]
+    },
+    {
+      "id": 26,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1460,
+        520
+      ],
+      "size": [
+        541.4005978484379,
+        765.4005978484379
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 82
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 20,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pingpong": false,
+        "save_image": true,
+        "crf": 20,
+        "save_metadata": false,
+        "audio_file": "",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00009.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
     }
   ],
   "links": [
