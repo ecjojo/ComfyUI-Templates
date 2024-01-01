@@ -46,8 +46,8 @@ Workflow Download:
 Simple Txt2Img
 
 Workflow Download:
-[SimpleFaceDetailer.json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/txt2img/txt2img.json) 
-![Workflow](https://github.com/ecjojo/ComfyUI-Templates/blob/main/txt2img/txt2img.png)
+[Simpletxt2img.json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/Txt2Img/txt2img.json) 
+![Workflow](https://github.com/ecjojo/ComfyUI-Templates/blob/main/Txt2Img/txt2img.png)
 
 ### Simple SVD
 
