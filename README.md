@@ -16,14 +16,14 @@ Workflow Download:
 [Draw2Img.json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/Draw2Img/SimpleDraw2Img.json) 
 ![Workflow](https://github.com/ecjojo/ComfyUI-Templates/blob/main/Draw2Img/SimpleDraw2Img.png)
 
-## AI Photo Tool()
+## AI Photo Tool(Realisitc)
 
 ### Merge Character & Background
 Let your character/photo merge to AI Background
 
 Workflow Download:
 [AIPhoto(BasicMerge).json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/AIPhotoTool/AIPhoto(BasicMerge).json) 
-![Workflow](https://github.com/ecjojo/ComfyUI-Templates/blob/mainAIPhotoTool/AIPhoto(BasicMerge).png)
+![Workflow](https://github.com/ecjojo/ComfyUI-Templates/blob/main/AIPhotoTool/AIPhoto(BasicMerge).png)
 
 ### Lora Character & Background with OnePrompt Node
 Using "OnePrompt Node" to generate random Character Shot
@@ -35,7 +35,7 @@ Workflow Download:
 ## AI Comic Tool(Anime Style)
 
 ### Img2Exp
-Let your character/photo into 5 Image w Expression Face
+Let your character/photo into 5 Images w Expression Face
 
 Workflow Download:
 [Img2Exp.json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/AIComicTool/Img2Exp.json) 
