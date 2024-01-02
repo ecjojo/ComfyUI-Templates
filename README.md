@@ -42,14 +42,16 @@ Workflow Download:
 ![Workflow](https://github.com/ecjojo/ComfyUI-Templates/blob/main/AIComicTool/Img2Exp.png)
 ![Demo](https://github.com/ecjojo/ComfyUI-Templates/blob/main/AIComicTool/Img2Exp_demo01.png)
 
-### Txt2Img (with FaceDetailer)
-Simple Txt2Img
+### Text2Img (with FaceDetailer)
+Simple Text2Img
 
 Workflow Download:
-[SimpleFaceDetailer.json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/txt2img/txt2img.json) 
-![Workflow](https://github.com/ecjojo/ComfyUI-Templates/blob/main/txt2img/txt2img.png)
+[SimpleFaceDetailer.json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/Text2Img/txt2img.json) 
+![Workflow](https://github.com/ecjojo/ComfyUI-Templates/blob/main/Text2Img/txt2img.png)
 
 ### Simple SVD
 
 Workflow Download:
 [SimpleSVD.json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/SVD/SimpleSVD.json) 
+![Demo01](https://github.com/ecjojo/ComfyUI-Templates/blob/main/SVD/SimpleSVD_demo01.mp4)
+![Demo02](https://github.com/ecjojo/ComfyUI-Templates/blob/main/SVD/SimpleSVD_demo02.mp4)
