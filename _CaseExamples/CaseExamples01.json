@@ -3,29 +3,6 @@
   "last_link_id": 1677,
   "nodes": [
     {
-      "id": 367,
-      "type": "Note",
-      "pos": [
-        -381,
-        45
-      ],
-      "size": {
-        "0": 356.5884094238281,
-        "1": 442.3824462890625
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "AI應用實例01\n服裝照片+AI模特操作流程分享 電商賣家必學\n\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nPatreon | ComfyUI Guide & Workflow\nhttps://www.patreon.com/ecjojo\n\nFollow me on Twitter\nhttps://twitter.com/ecjojo_ai\n\nJoin my Discord Community\nhttps://discord.gg/7cDb4vSH3z"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 408,
       "type": "UltralyticsDetectorProvider",
       "pos": [
@@ -37,7 +14,7 @@
         "1": 78.3895034790039
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -76,7 +53,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -132,7 +109,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -289,7 +266,7 @@
         428.6381530761719
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -615,7 +592,7 @@
         "1": 81.44223022460938
       },
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "properties": {
         "text": ""
@@ -638,7 +615,7 @@
         "1": 81.44223022460938
       },
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "properties": {
         "text": ""
@@ -661,7 +638,7 @@
         "1": 81.44223022460938
       },
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "properties": {
         "text": ""
@@ -736,7 +713,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "outputs": [
         {
@@ -867,7 +844,7 @@
         "1": 518.2967529296875
       },
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "outputs": [
         {
@@ -1122,7 +1099,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "outputs": [
         {
@@ -1250,7 +1227,7 @@
         "Node name for S&R": "KSampler (Efficient)"
       },
       "widgets_values": [
-        -1,
+        1109188424746135,
         null,
         10,
         1.5,
@@ -1341,7 +1318,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "outputs": [
         {
@@ -1374,7 +1351,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "outputs": [
         {
@@ -1406,7 +1383,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "outputs": [
         {
@@ -1438,7 +1415,7 @@
         "1": 480.6640930175781
       },
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "outputs": [
         {
@@ -1476,7 +1453,7 @@
         "1": 672.9844970703125
       },
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -1706,7 +1683,7 @@
         58
       ],
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "outputs": [
         {
@@ -1738,7 +1715,7 @@
         58
       ],
       "flags": {},
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "outputs": [
         {
@@ -1769,7 +1746,7 @@
         "1": 78.18721008300781
       },
       "flags": {},
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "properties": {
         "text": ""
@@ -1830,6 +1807,29 @@
       "widgets_values": [
         0.5
       ]
+    },
+    {
+      "id": 367,
+      "type": "Note",
+      "pos": [
+        -381,
+        45
+      ],
+      "size": {
+        "0": 356.5884094238281,
+        "1": 442.3824462890625
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "AI應用實例01\n服裝照片+AI模特操作流程分享 電商賣家必學\n\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nPatreon | ComfyUI Guide & Workflow\nhttps://www.patreon.com/ecjojo\n\nFollow me on Twitter\nhttps://twitter.com/ecjojo_ai\n\nJoin my Discord Community\nhttps://discord.gg/mwVwW8j7Gy"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
