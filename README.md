@@ -52,7 +52,7 @@ Workflow Download:
 ### Simple SVD
 
 Workflow Download:
-[SimpleSVD.json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/SVD/SimpleSVD.json) 
+[SimpleSVD.json](https://github.com/ecjojo/ComfyUI-Templates/blob/main/SVD/SimpleSVD_ver2.json) 
 
 <video src='https://github.com/ecjojo/ComfyUI-Templates/assets/48451938/6c3220de-ff41-411a-a891-27ace749f5a1.mp4' width=180/>
 <video src='https://github.com/ecjojo/ComfyUI-Templates/assets/48451938/4e7bc1a1-bbcd-492b-abd4-1c41ff5d1911.mp4' width=180/>
