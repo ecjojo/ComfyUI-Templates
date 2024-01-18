@@ -6,6 +6,7 @@
 [(中文)ComfyUI Guide(Patreon)](https://www.patreon.com/ecjojo)
 
 [(ENG)ComfyUI Guide(buymeacoffee)](https://www.buymeacoffee.com/ecjojo)
+
 ---
 
 [Join my Discord Commnuity | jojo studio](https://discord.gg/qxQMyjkcqE)
