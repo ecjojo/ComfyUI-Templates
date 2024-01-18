@@ -2,12 +2,16 @@
 
 "⭐Give me a star if u like this!⭐"
 
+---
+[(中文)ComfyUI Guide(Patreon)](https://www.patreon.com/ecjojo)
+
+[(ENG)ComfyUI Guide(buymeacoffee)](https://www.buymeacoffee.com/ecjojo)
+---
+
 [Join my Discord Commnuity | jojo studio](https://discord.gg/qxQMyjkcqE)
 
 [Follow me on Twitter | @ecjojo](https://twitter.com/ecjojo_ai)
-
-[中文 ComfyUI Guide](https://www.patreon.com/ecjojo)
-
+---
 
 ### Simple Draw2Img
 Simple ControlNet scribble2image with Paint Node
