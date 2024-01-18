@@ -12,6 +12,7 @@
 [Join my Discord Commnuity | jojo studio](https://discord.gg/qxQMyjkcqE)
 
 [Follow me on Twitter | @ecjojo](https://twitter.com/ecjojo_ai)
+
 ---
 
 ### Simple Draw2Img
