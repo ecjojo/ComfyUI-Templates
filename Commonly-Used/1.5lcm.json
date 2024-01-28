@@ -1,0 +1,870 @@
+{
+  "last_node_id": 21,
+  "last_link_id": 26,
+  "nodes": [
+    {
+      "id": 13,
+      "type": "LoraLoader",
+      "pos": [
+        459.9118174197691,
+        106.6067976449342
+      ],
+      "size": [
+        357.27033081054697,
+        126
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 21
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            23
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            24,
+            25
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "LCM_LoRA_Weights_SD15.safetensors",
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": 5,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1343.7079992675785,
+        106.63889892578132
+      ],
+      "size": [
+        336.1849748595687,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            4
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "type": "KSampler",
+      "pos": [
+        1351.7079992675785,
+        275.63889892578106
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 23,
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 6,
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 8,
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 4,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            1
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        286794312537787,
+        "randomize",
+        10,
+        1.5,
+        "lcm",
+        "exponential",
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "type": "VAEDecode",
+      "pos": [
+        1362.7079992675785,
+        595.638898925781
+      ],
+      "size": [
+        300.3514116210936,
+        46
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 1
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 10,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            12,
+            13
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 2,
+      "type": "FaceDetailer",
+      "pos": [
+        1761.3472607421863,
+        105.9166967773438
+      ],
+      "size": {
+        "0": 389.97283935546875,
+        "1": 832
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 12
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 14,
+          "slot_index": 1
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 15,
+          "slot_index": 2
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 16,
+          "slot_index": 3
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 17,
+          "slot_index": 4
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 18,
+          "slot_index": 5
+        },
+        {
+          "name": "bbox_detector",
+          "type": "BBOX_DETECTOR",
+          "link": 26,
+          "slot_index": 6
+        },
+        {
+          "name": "sam_model_opt",
+          "type": "SAM_MODEL",
+          "link": null
+        },
+        {
+          "name": "segm_detector_opt",
+          "type": "SEGM_DETECTOR",
+          "link": null
+        },
+        {
+          "name": "detailer_hook",
+          "type": "DETAILER_HOOK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            11
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "cropped_refined",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 6
+        },
+        {
+          "name": "cropped_enhanced_alpha",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 6
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "detailer_pipe",
+          "type": "DETAILER_PIPE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "cnet_images",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceDetailer"
+      },
+      "widgets_values": [
+        256,
+        true,
+        768,
+        1042528048008822,
+        "randomize",
+        20,
+        6,
+        "lms",
+        "exponential",
+        0.5,
+        5,
+        true,
+        true,
+        0.5,
+        10,
+        3,
+        "center-1",
+        0,
+        0.93,
+        0,
+        0.7,
+        "False",
+        10,
+        "",
+        1
+      ]
+    },
+    {
+      "id": 15,
+      "type": "UltralyticsDetectorProvider",
+      "pos": [
+        1765.3472607421863,
+        984.9166967773435
+      ],
+      "size": [
+        376.99000665283165,
+        78
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "BBOX_DETECTOR",
+          "type": "BBOX_DETECTOR",
+          "links": [
+            26
+          ],
+          "shape": 3
+        },
+        {
+          "name": "SEGM_DETECTOR",
+          "type": "SEGM_DETECTOR",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsDetectorProvider"
+      },
+      "widgets_values": [
+        "bbox/face_yolov8m.pt"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        2245.750073852538,
+        113.55551490783692
+      ],
+      "size": [
+        595.1651637207033,
+        653.0603921142576
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyy-MM-dd%/ComfyUI"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        893.5973089599604,
+        112.00000190734869
+      ],
+      "size": {
+        "0": 388.8320007324219,
+        "1": 134.35897827148438
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            6,
+            17
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 18,
+      "type": "Note",
+      "pos": [
+        464.63874755859433,
+        284.68058998107904
+      ],
+      "size": [
+        351.3758852849048,
+        127.67376874068191
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "you can download on \nhttps://civitai.com/models/195519/lcm-lora-weights-stable-diffusion-acceleration-module\n\nand put on (ComfyUI Path)/ComfyUI/models/loras"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [
+        902.5973089599604,
+        301.0000019073486
+      ],
+      "size": [
+        380.83392888849426,
+        126.57092250477183
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 25,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            8,
+            18
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 17,
+      "type": "Note",
+      "pos": [
+        40,
+        280
+      ],
+      "size": [
+        320.44146728515625,
+        115.16326904296875
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "you can download any checkpoint model on https://civitai.com/models\n\nand put on (ComfyUI Path)/ComfyUI/models/checkpoints"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 6,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        37,
+        119
+      ],
+      "size": [
+        325.5305340576166,
+        98
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            14,
+            21
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            15,
+            22
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            10,
+            16
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "dreamshaper_8.safetensors"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "PreviewImage",
+      "pos": [
+        1349,
+        729
+      ],
+      "size": [
+        332.30388063964824,
+        345.28179967041
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 14,
+      "type": "Note",
+      "pos": [
+        -288,
+        50
+      ],
+      "size": [
+        274.3129890655515,
+        395.33326434326125
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Basic Workflow Template\n\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\nPatreon | ComfyUI Guide & Workflow\nhttps://www.patreon.com/ecjojo\n\nFollow me on Twitter\nhttps://twitter.com/ecjojo_ai\n\nJoin my Discord Community\nhttps://discord.gg/7cDb4vSH3z"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      0,
+      "LATENT"
+    ],
+    [
+      4,
+      5,
+      0,
+      1,
+      3,
+      "LATENT"
+    ],
+    [
+      6,
+      7,
+      0,
+      1,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      8,
+      8,
+      0,
+      1,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      10,
+      6,
+      2,
+      3,
+      1,
+      "VAE"
+    ],
+    [
+      11,
+      2,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      3,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      3,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      6,
+      0,
+      2,
+      1,
+      "MODEL"
+    ],
+    [
+      15,
+      6,
+      1,
+      2,
+      2,
+      "CLIP"
+    ],
+    [
+      16,
+      6,
+      2,
+      2,
+      3,
+      "VAE"
+    ],
+    [
+      17,
+      7,
+      0,
+      2,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      8,
+      0,
+      2,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      21,
+      6,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      22,
+      6,
+      1,
+      13,
+      1,
+      "CLIP"
+    ],
+    [
+      23,
+      13,
+      0,
+      1,
+      0,
+      "MODEL"
+    ],
+    [
+      24,
+      13,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      25,
+      13,
+      1,
+      8,
+      0,
+      "CLIP"
+    ],
+    [
+      26,
+      15,
+      0,
+      2,
+      6,
+      "BBOX_DETECTOR"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "1. Checkpoint Model(SD1.5)",
+      "bounding": [
+        16,
+        18,
+        381,
+        425
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "2. LCM Lora",
+      "bounding": [
+        422,
+        19,
+        421,
+        424
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "3. Enter Prompt",
+      "bounding": [
+        862,
+        19,
+        442,
+        427
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "4. Image Size & KSampler",
+      "bounding": [
+        1325,
+        20,
+        374,
+        648
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "5. FaceDetailer",
+      "bounding": [
+        1732,
+        21,
+        453,
+        1066
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "6. Save Image",
+      "bounding": [
+        2220,
+        23,
+        657,
+        771
+      ],
+      "color": "#8AA",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
