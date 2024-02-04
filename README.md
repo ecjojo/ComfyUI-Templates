@@ -14,7 +14,21 @@
 Give me a star if u like this!⭐
 
 ---
+### My ComfyUI Blog
+|<img width="20" alt="LANG" src="https://github.com/ecjojo/ComfyUI-Templates/assets/48451938/ca5343ef-a610-49a6-af0a-e5815c186fdd">||||
+|---|---|---|---|
+|ZH| [Patreon](https://www.patreon.com/ecjojo)| ComfyUI 教學 & Workflow 設計分享 | |
+|EN| [Buymeacoffee](https://www.buymeacoffee.com/ecjojo/posts)| ComfyUI Guide & Templates |10% sync... |
 
+### My ComfyUI Template Collection
+|⭐|||
+|---|---|---|
+|1| ComfyUI-CaseExamples (MemberOnly)|Advanced ComfyUI Template For Commercial|
+|2| [ComfyUI-Template-Pack](https://github.com/ecjojo/ComfyUI-Templates/tree/main/ComfyUI-Teamplate-Pack) | 10 ComfyUI Templates for Beginner|
+|3| [ComfyUI-101Days](https://github.com/ecjojo/ComfyUI-Templates/tree/main/ComfyUI-101Days) |My Daily ComfyUI Workflow Creation|
+|4| [_CivitaiArticles](https://github.com/ecjojo/ComfyUI-Templates/tree/main/_CivitaiArticles) |[Civitai@ecjojo](https://civitai.com/user/ecjojo/articles)|
+
+---
 ### Simple SVD DEMO
 
 <video src='https://github.com/ecjojo/ComfyUI-Templates/assets/48451938/6c3220de-ff41-411a-a891-27ace749f5a1.mp4' width=180/>
