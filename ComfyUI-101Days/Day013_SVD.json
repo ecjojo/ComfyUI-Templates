@@ -1,20 +1,20 @@
 {
-  "last_node_id": 54,
+  "last_node_id": 56,
   "last_link_id": 23,
   "nodes": [
     {
       "id": 8,
       "type": "VAEDecode",
       "pos": [
-        1180,
-        690
+        1216,
+        336
       ],
       "size": {
         "0": 210,
         "1": 46
       },
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -43,18 +43,56 @@
       }
     },
     {
+      "id": 14,
+      "type": "VideoLinearCFGGuidance",
+      "pos": [
+        1216,
+        128
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            9
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VideoLinearCFGGuidance"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
       "id": 30,
       "type": "RIFE VFI",
       "pos": [
-        1490,
-        690
+        1456,
+        336
       ],
       "size": {
         "0": 443.4000244140625,
         "1": 222
       },
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -92,57 +130,178 @@
       ]
     },
     {
-      "id": 54,
-      "type": "Note",
+      "id": 36,
+      "type": "FreeU_V2",
       "pos": [
-        1580,
-        330
+        1552,
+        128
       ],
-      "size": [
-        319.8595220976392,
-        97.04191571445068
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 9
+        }
       ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            10
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FreeU_V2"
+      },
+      "widgets_values": [
+        1.1,
+        1.1,
+        0.9,
+        0.5
+      ]
+    },
+    {
+      "id": 15,
+      "type": "ImageOnlyCheckpointLoader",
+      "pos": [
+        100,
+        130
+      ],
+      "size": {
+        "0": 369.6000061035156,
+        "1": 98
+      },
       "flags": {},
       "order": 0,
       "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            14
+          ],
+          "shape": 3
+        },
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            3
+          ],
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            2,
+            5
+          ],
+          "shape": 3
+        }
+      ],
       "properties": {
-        "text": ""
+        "Node name for S&R": "ImageOnlyCheckpointLoader"
       },
       "widgets_values": [
-        "b1: responsible for the larger areas on the image\nb2: responsible for the smaller areas on the image\ns1: responsible for the details in b2\ns2: responsible for the details in b1"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
+        "SVD\\svd_xt.safetensors"
+      ]
     },
     {
-      "id": 53,
-      "type": "Note",
+      "id": 46,
+      "type": "CLIPSetLastLayer",
       "pos": [
-        1180,
-        30
+        528,
+        143
       ],
-      "size": [
-        323.52884224918125,
-        123.11662019803705
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 16
+        }
       ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            15
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -2
+      ]
+    },
+    {
+      "id": 23,
+      "type": "LoadImage",
+      "pos": [
+        114,
+        287
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
       "flags": {},
       "order": 1,
       "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4,
+            20
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
       "properties": {
-        "text": ""
+        "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "motion_bucket_id:\nbiggest number the motion more changes\n\naugmentation_level:\nbiggest number let similarity less with input image"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
+        "ecjojo_00111_ (2).png",
+        "image"
+      ]
     },
     {
       "id": 52,
       "type": "Get image size",
       "pos": [
-        880,
-        270
+        870,
+        -20
       ],
       "size": {
         "0": 210,
@@ -189,56 +348,214 @@
       }
     },
     {
-      "id": 46,
-      "type": "CLIPSetLastLayer",
+      "id": 38,
+      "type": "KSampler",
       "pos": [
-        480,
-        490
+        880,
+        336
       ],
       "size": {
         "0": 315,
-        "1": 58
+        "1": 262
       },
       "flags": {},
-      "order": 5,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 16
+          "name": "model",
+          "type": "MODEL",
+          "link": 10
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 11
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 12
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 13
         }
       ],
       "outputs": [
         {
-          "name": "CLIP",
-          "type": "CLIP",
+          "name": "LATENT",
+          "type": "LATENT",
           "links": [
-            15
+            1
           ],
           "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPSetLastLayer"
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        -2
+        853240583514149,
+        "randomize",
+        25,
+        1,
+        "lcm",
+        "sgm_uniform",
+        1
+      ]
+    },
+    {
+      "id": 53,
+      "type": "Note",
+      "pos": [
+        512,
+        640
+      ],
+      "size": {
+        "0": 323.5288391113281,
+        "1": 123.11662292480469
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "motion_bucket_id:\nbiggest number the motion more changes\n\naugmentation_level:\nbiggest number let similarity less with input image"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 54,
+      "type": "Note",
+      "pos": [
+        1568,
+        -32
+      ],
+      "size": {
+        "0": 319.8595275878906,
+        "1": 97.04191589355469
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "b1: responsible for the larger areas on the image\nb2: responsible for the smaller areas on the image\ns1: responsible for the details in b2\ns2: responsible for the details in b1"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 44,
+      "type": "LoraLoader",
+      "pos": [
+        880,
+        128
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 14
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            6
+          ],
+          "shape": 3
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "lcm\\SDXL\\pytorch_lora_weights.safetensors",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 51,
+      "type": "JWImageResizeByLongerSide",
+      "pos": [
+        520,
+        -20
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JWImageResizeByLongerSide"
+      },
+      "widgets_values": [
+        1024,
+        "bicubic"
       ]
     },
     {
       "id": 45,
       "type": "CheckpointLoaderSimple",
       "pos": [
-        70,
-        770
+        96,
+        -32
       ],
-      "size": {
-        "0": 315,
-        "1": 98
-      },
+      "size": [
+        368,
+        96
+      ],
       "flags": {},
-      "order": 2,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -270,158 +587,18 @@
       ]
     },
     {
-      "id": 23,
-      "type": "LoadImage",
-      "pos": [
-        70,
-        370
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            4,
-            20
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ecjojo_00111_ (2).png",
-        "image"
-      ]
-    },
-    {
-      "id": 44,
-      "type": "LoraLoader",
-      "pos": [
-        830,
-        469
-      ],
-      "size": {
-        "0": 315,
-        "1": 126
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 14
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 15
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            6
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoader"
-      },
-      "widgets_values": [
-        "lcm\\SDXL\\pytorch_lora_weights.safetensors",
-        0.5,
-        0.5
-      ]
-    },
-    {
-      "id": 15,
-      "type": "ImageOnlyCheckpointLoader",
-      "pos": [
-        30,
-        189
-      ],
-      "size": {
-        "0": 369.6000061035156,
-        "1": 98
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            14
-          ],
-          "shape": 3
-        },
-        {
-          "name": "CLIP_VISION",
-          "type": "CLIP_VISION",
-          "links": [
-            3
-          ],
-          "shape": 3
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            2,
-            5
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageOnlyCheckpointLoader"
-      },
-      "widgets_values": [
-        "SVD\\svd_xt.safetensors"
-      ]
-    },
-    {
       "id": 26,
       "type": "VHS_VideoCombine",
       "pos": [
-        2030,
-        690
+        1936,
+        336
       ],
       "size": [
-        315,
-        682.8732394366198
+        320,
+        736
       ],
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -447,9 +624,9 @@
         "Node name for S&R": "VHS_VideoCombine"
       },
       "widgets_values": {
-        "frame_rate": 10,
+        "frame_rate": 15,
         "loop_count": 0,
-        "filename_prefix": "AnimateDiff",
+        "filename_prefix": "svd",
         "format": "video/h264-mp4",
         "pix_fmt": "yuv420p",
         "crf": 20,
@@ -460,7 +637,7 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "AnimateDiff_00007.mp4",
+            "filename": "AnimateDiff_00001.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h264-mp4"
@@ -469,11 +646,34 @@
       }
     },
     {
+      "id": 56,
+      "type": "Note",
+      "pos": [
+        3233.829138305663,
+        591.3697379150386
+      ],
+      "size": {
+        "0": 319.8595275878906,
+        "1": 97.04191589355469
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "b1: responsible for the larger areas on the image\nb2: responsible for the smaller areas on the image\ns1: responsible for the details in b2\ns2: responsible for the details in b1"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
       "id": 12,
       "type": "SVD_img2vid_Conditioning",
       "pos": [
-        1190,
-        209
+        512,
+        352
       ],
       "size": {
         "0": 315,
@@ -548,187 +748,9 @@
         1024,
         576,
         20,
-        8,
         10,
+        15,
         0
-      ]
-    },
-    {
-      "id": 14,
-      "type": "VideoLinearCFGGuidance",
-      "pos": [
-        1180,
-        479
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 6
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            9
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VideoLinearCFGGuidance"
-      },
-      "widgets_values": [
-        1
-      ]
-    },
-    {
-      "id": 51,
-      "type": "JWImageResizeByLongerSide",
-      "pos": [
-        490,
-        270
-      ],
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 20
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            21
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "JWImageResizeByLongerSide"
-      },
-      "widgets_values": [
-        1280,
-        "bicubic"
-      ]
-    },
-    {
-      "id": 36,
-      "type": "FreeU_V2",
-      "pos": [
-        1590,
-        480
-      ],
-      "size": {
-        "0": 315,
-        "1": 130
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 9
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            10
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FreeU_V2"
-      },
-      "widgets_values": [
-        1.1,
-        1.1,
-        0.9,
-        0.5
-      ]
-    },
-    {
-      "id": 38,
-      "type": "KSampler",
-      "pos": [
-        2010,
-        180
-      ],
-      "size": {
-        "0": 315,
-        "1": 262
-      },
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 10
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 11
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 12
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 13
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            1
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        833809089616912,
-        "randomize",
-        25,
-        1,
-        "lcm",
-        "sgm_uniform",
-        1
       ]
     }
   ],
