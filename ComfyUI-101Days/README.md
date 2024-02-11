@@ -1,1 +1,1 @@
-
+->https://github.com/ecjojo/ComfyUI-Templates/wiki
