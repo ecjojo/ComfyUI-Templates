@@ -26,7 +26,8 @@ Give me a star if u like this!⭐
 |1| ComfyUI-CaseExamples (MemberOnly)|Advanced ComfyUI Template For Commercial|
 |2| [ComfyUI-Template-Pack](https://github.com/ecjojo/ComfyUI-Templates/tree/main/ComfyUI-Teamplate-Pack) | 10 ComfyUI Templates for Beginner|
 |3| [ComfyUI-101Days](https://github.com/ecjojo/ComfyUI-Templates/tree/main/ComfyUI-101Days) |My Daily ComfyUI Workflow Creation|
-|4| [_CivitaiArticles](https://github.com/ecjojo/ComfyUI-Templates/tree/main/_CivitaiArticles) |[Civitai@ecjojo](https://civitai.com/user/ecjojo/articles)|
+|4| [CivitaiArticles](https://civitai.com/user/ecjojo/articles) |Civitai@ecjojo|
+|5| [Openart.ai](https://openart.ai/workflows/profile/ecjojo) |Openartai@ecjojo|
 
 ---
 ### Simple SVD DEMO
