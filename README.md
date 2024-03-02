@@ -15,7 +15,7 @@ Give me a star if u like this!⭐
 
 ---
 
-[101Days ComfyUI Workflow](https://github.com/ecjojo/ComfyUI-Templates/wiki)
+[ComfyUI Workflow Wiki](https://github.com/ecjojo/ComfyUI-Templates/wiki)
 
 ---
 ### My ComfyUI Blog
@@ -38,7 +38,6 @@ Give me a star if u like this!⭐
 
 <video src='https://github.com/ecjojo/ComfyUI-Templates/assets/48451938/6c3220de-ff41-411a-a891-27ace749f5a1.mp4' width=180/>
 </div>
-
 
 
 [stars-shield]: https://img.shields.io/github/stars/ecjojo/ComfyUI-Templates.svg?style=for-the-badge
