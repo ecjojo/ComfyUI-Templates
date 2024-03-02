@@ -14,6 +14,10 @@
 Give me a star if u like this!⭐
 
 ---
+
+[101Days ComfyUI Workflow](https://github.com/ecjojo/ComfyUI-Templates/wiki)
+
+---
 ### My ComfyUI Blog
 |<img width="20" alt="LANG" src="https://github.com/ecjojo/ComfyUI-Templates/assets/48451938/ca5343ef-a610-49a6-af0a-e5815c186fdd">||||
 |---|---|---|---|
