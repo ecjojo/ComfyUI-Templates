@@ -22,12 +22,12 @@ Give me a star if u like this!⭐
 |<img width="20" alt="LANG" src="https://github.com/ecjojo/ComfyUI-Templates/assets/48451938/ca5343ef-a610-49a6-af0a-e5815c186fdd">||||
 |---|---|---|---|
 |ZH| [Patreon](https://www.patreon.com/ecjojo)| ComfyUI 教學 & Workflow 設計分享 | |
-|EN| [Buymeacoffee](https://www.buymeacoffee.com/ecjojo/posts)| ComfyUI Guide & Templates |10% sync... |
+|EN| [Buymeacoffee](https://www.buymeacoffee.com/ecjojo/posts)| ComfyUI Guide & Templates |Pause Updates... |
 
 ### My ComfyUI Template Collection
 |⭐|||
 |---|---|---|
-|1| ComfyUI-CaseExamples (MemberOnly)|Advanced ComfyUI Template For Commercial|
+|1| ComfyUI-CaseExamples (Member Only)|Advanced ComfyUI Template For Commercial|
 |2| [ComfyUI-Template-Pack](https://github.com/ecjojo/ComfyUI-Templates/tree/main/ComfyUI-Teamplate-Pack) | 10 ComfyUI Templates for Beginner|
 |3| [ComfyUI-101Days](https://github.com/ecjojo/ComfyUI-Templates/tree/main/ComfyUI-101Days) |My Daily ComfyUI Workflow Creation|
 |4| [CivitaiArticles](https://civitai.com/user/ecjojo/articles) |Civitai@ecjojo|
