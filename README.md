@@ -34,7 +34,7 @@ Give me a star if u like this!⭐
 |5| [Openart.ai](https://openart.ai/workflows/profile/ecjojo) |Openartai@ecjojo|
 
 ---
-### Simple SVD DEMO
+### 
 
 <video src='https://github.com/ecjojo/ComfyUI-Templates/assets/48451938/6c3220de-ff41-411a-a891-27ace749f5a1.mp4' width=180/>
 </div>
@@ -53,3 +53,6 @@ Give me a star if u like this!⭐
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/ec-j-0095a952/
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ecjojo/ComfyUI-Templates&type=Date)](https://star-history.com/#ecjojo/ComfyUI-Templates&Date)
