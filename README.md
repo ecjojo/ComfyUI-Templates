@@ -51,7 +51,7 @@ Give me a star if u like this!⭐
 [twitter-shield]: https://img.shields.io/badge/-Twitter-black.svg?style=for-the-badge&logo=twitter&colorB=555
 [twitter-url]: https://twitter.com/ecjojo_ai
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/ec-j-0095a952/
+[linkedin-url]: https://www.linkedin.com/in/ecjojo/
 
 ## Star History
 
