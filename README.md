@@ -22,7 +22,8 @@ Give me a star if u like this!⭐
 |<img width="20" alt="LANG" src="https://github.com/ecjojo/ComfyUI-Templates/assets/48451938/ca5343ef-a610-49a6-af0a-e5815c186fdd">||||
 |---|---|---|---|
 |ZH| [Patreon](https://www.patreon.com/ecjojo)| ComfyUI 教學 & Workflow 設計分享 | |
-|EN| [Buymeacoffee](https://www.buymeacoffee.com/ecjojo/posts)| ComfyUI Guide & Templates |Pause Updates... |
+|EN| [Buymeacoffee](https://www.buymeacoffee.com/ecjojo/posts)| ComfyUI Templates |Pause Updates... |
+|EN| [Medium](https://medium.com/@ecjojo_ai)| ComfyUI Guide |⭐Planning|
 
 ### My ComfyUI Template Collection
 |⭐|||
